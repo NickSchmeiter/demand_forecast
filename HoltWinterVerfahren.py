@@ -37,10 +37,10 @@ def holt_winter_verfahren(alpha=0.563,beta=0.372,gamma=0.179,b1=68,b2=58,b3=76,b
     pd.set_option('display.max_columns', None)
     print(df)
     print('Die mittlere absolute Abweichung beim Holt-Winters-Verfahren bei Alpha: ' + str(alpha) + ' Beta: '+str(beta) + ' Gamma: ' + str(gamma) + ' beträgt: ' + str(df.iloc[5, 12]) + ' !')
-    #print plot 
+    #print plot
     dfplot = pd.DataFrame()
     dfplot['Bedarf'] = df.loc['Bedarf']
     dfplot['Prognose Holt Winter'] = df.iloc[4,5:15]
     dfplot.plot()
-    plt.ylim(0, (df.iloc[4, 15] * 1.333))
+    plt.ylim(0, (df.iloc[4, 15] * 1.66))
     plt.show()
